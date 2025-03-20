@@ -1,0 +1,28 @@
+<template>
+  <div>
+    <h1 @click="incrementar">{{ titulo }}</h1>
+    <button @click="incrementar">Veces click: {{ contador }}</button>
+  </div>
+</template>
+
+<style>
+h1 {
+  color: blue;
+}
+</style>
+
+<script>
+export default {
+  data() {
+    return {
+      titulo: "Mi Prueba con Vue",
+      contador: 0
+    };
+  },
+  methods: {
+    incrementar() {
+      this.contador++;
+    }
+  }
+};
+</script>
